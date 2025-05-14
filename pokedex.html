@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Pesquisar Pokémon">
+            <button id="search-button">Pesquisar</button>
+        </div>
+        <script>
+            document.getElementById('search-button').addEventListener('click', function() {
+                const query = document.getElementById('search-input').value.toLowerCase();
+                const pokemonList = document.getElementById('pokemon-list');
+                const pokemonItems = pokemonList.getElementsByTagName('li');
+                
+                for (let item of pokemonItems) {
+                    if (item.textContent.toLowerCase().includes(query)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        </script>
+        <div id="pokedex"></div>
+        <img class="pokedex" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="Pokedex">
+        <div class="pokemon-list">
+            <h2>Lista de Pokemons</h2>
+            <ul id="pokemon-list"></ul>
+        </div>
+        <p><strong>Número do Pokémon:</strong> 715</p>
+        <div class="pokemon-type">
+            <h2>Tipos de Pokemon</h2>
+            <ul id="type-list">
+            <li>Voador</li>
+            <li>Dragão</li>
+            </ul>
+        </div>
+        <div class="pokemon-ability">
+            <h2>Habilidades de Pokemon</h2>
+            <ul id="ability-list">
+            <li>Infiltrator</li>
+            <li>Frisk</li>
+            </ul>
+        </div>
+        <div class="pokemon-move">
+            <h2>Movimentos de Pokemon</h2>
+            <ul id="move-list">
+            <li>Boomburst</li>
+            <li>Dragon Pulse</li>
+            <li>Hurricane</li>
+            <li>Flamethrower</li>
+            </ul>
+        </div>
+        <div class="pokemon-evolution">
+            <h2>Evoluções de Pokemon</h2>
+            <ul id="evolution-list">
+            <li>Noibat</li>
+            <li>Noivern</li>
+            </ul>
+        </div>
+        <div class="pokemon-habitat">
+            <h2>Habitat de Pokemon</h2>
+            <ul id="habitat-list">
+            <li>Cavernas</li>
+            </ul>
+        </div>
+        <div class="pokemon-info">
+            <h2>Noivern</h2>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/715.png" alt="Noivern">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/715.png" alt="Noivern Shiny">
+            <p>Noivern é um Pokémon do tipo Voador/Dragão conhecido por sua velocidade e habilidades sonoras.</p>
+        </div>
+</body>
+</html>
