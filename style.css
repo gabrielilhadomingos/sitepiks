@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #c50000, #2e0202);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.534);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+    animation: pulse 2s infinite;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: #2c0000 0px 0px 20px 0px, #aa0202 0px 0px 20px 0px;
+    }
+    50% {
+        box-shadow: #2c0000 0px 0px 30px 5px, #aa0202 0px 0px 30px 5px;
+    }
+    100% {
+        box-shadow: #2c0000 0px 0px 20px 0px, #aa0202 0px 0px 20px 0px;
+    }
+}
+
+button {
+    background-color: #c50000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #a00000;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.534);
+}
+.username-button, .password-button {
+    background-color: #2e0202;
+    color: #fff;
+    border: 2px solid #c50000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.username-button:hover, .password-button:hover {
+    background-color: #a00000;
+    border-color: #800000;
+    transform: scale(1.05);
+}
+
+.username-button:focus, .password-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.534);
+}
+
+.username-button:active, .password-button:active {
+    background-color: #800000;
+    transform: scale(0.95);
+}
+
+
+button:active {
+    background-color: #800000;
+    transform: scale(0.95);
+}
